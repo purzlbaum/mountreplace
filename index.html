@@ -1,0 +1,273 @@
+<!doctype html>
+<html class="no-js" lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>🍏 ↔️ 🪟</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="shortcut icon" href="dist/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="dist/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="dist/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="dist/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="dist/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="dist/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="dist/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="dist/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="dist/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="dist/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="dist/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="dist/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="dist/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="dist/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video, button {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            -webkit-appearance: none;
+            background: none;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            src: url('./dist/fonts/Inter-Regular.woff2') format('woff2'),
+            url('./dist/fonts/Inter-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-text-size-adjust: 100%;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+
+        .title-h1 {
+            font-weight: 400;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 600px;
+            font-size: 5.6rem;
+        }
+
+        .title-h1 + * {
+            margin-top: 8px;
+        }
+
+        .paragraph {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 600px;
+        }
+
+        .paragraph + * {
+            margin-top: 32px;
+        }
+
+        .form {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 600px;
+        }
+
+        .form__group {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .form__group--button {
+            justify-content: flex-end;
+        }
+
+        .form__group + .form__group {
+            margin-top: 8px;
+        }
+
+        .form__group + .form__group--button {
+            margin-top: 16px;
+        }
+
+        .form__label {
+            width: 150px;
+        }
+
+        .form__input {
+            border: 1px solid #EEEEEE;
+            border-radius: 6px;
+            padding: 6px 12px;
+            width: calc(100% - 150px);
+            resize: none;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form__group--message {
+            padding-left: 150px;
+            color: #388E3C;
+            opacity: 0;
+            transition: opacity 0.4s linear;
+        }
+
+        .form__group--message.success {
+            opacity: 1;
+        }
+
+        .form__button {
+            font-family: 'Inter', sans-serif;
+            padding: 6px 12px;
+            background: #3949AB;
+            color: #ffffff;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.4s ease;
+        }
+
+        .form__button:hover {
+            background: #1A237E;
+        }
+    </style>
+</head>
+
+<body>
+<h1 class="title-h1">
+    🍏 ↔️ 🪟
+</h1>
+<p class="paragraph">
+    Wandelt Pfade von Windows oder Apple in beide Richtungen um.
+</p>
+<form class="form" onsubmit="return false;">
+    <div class="form__group">
+        <label for="original-path" class="form__label">Original-Pfad</label>
+        <input id="original-path" class="form__input" type="text">
+    </div>
+    <div class="form__group">
+        <label for="replaced-paths" class="form__label">Umgewandelte Pfade</label>
+        <textarea id="replaced-paths" class="form__input" rows="5" readonly></textarea>
+    </div>
+    <div class="form__group form__group--message">
+        Die Pfade wurden erfolgreich in die Zwischenablage kopiert.
+    </div>
+    <div class="form__group form__group--button">
+        <button id="copy" class="form__button" type="button">Kopieren</button>
+    </div>
+</form>
+
+<script>
+    const macMount = 'afp://nsg-file-01/';
+    const windowsMount = 'G:\\';
+
+    // Listen for input changes on the "original-path" field
+    document.getElementById('original-path').addEventListener('input', () => {
+        const originalPath = document.getElementById('original-path').value.trim();
+        const replacedPaths = document.getElementById('replaced-paths');
+
+        let macPath, windowsPath;
+
+        // Check if the path is Mac or Windows and transform accordingly
+        if (originalPath.startsWith(macMount)) {
+            // Mac to Windows
+            macPath = originalPath;
+            windowsPath = originalPath
+                .replace(macMount, windowsMount)
+                .replace(/\//g, '\\');
+        } else if (originalPath.startsWith(windowsMount)) {
+            // Windows to Mac
+            windowsPath = originalPath;
+            macPath = originalPath
+                .replace(windowsMount, macMount)
+                .replace(/\\/g, '/');
+        } else {
+            replacedPaths.value = 'Invalid input format';
+            return;
+        }
+
+        // Set the result in the textarea
+        replacedPaths.value = `Mac: ${macPath}\nWindows: ${windowsPath}`;
+    });
+
+    // Add functionality to copy the text from the textarea
+    document.getElementById('copy').addEventListener('click', () => {
+        const replacedPaths = document.getElementById('replaced-paths');
+        const message = document.querySelector('.form__group--message');
+
+        replacedPaths.select();
+        document.execCommand('copy');
+
+        // Add success class to the message div
+        message.classList.add('success');
+
+        // Remove success class after 3 seconds
+        setTimeout(() => {
+            message.classList.remove('success');
+        }, 3000);
+    });
+</script>
+
+</body>
+
+</html>
